@@ -8,9 +8,9 @@
 </head>
 <body>
     <header>
-        <a href="{% url 'index' %}">Player</a>
-        <a href="{% url 'teams' %}">Teams</a>
-        <a href="{% url 'matches' %}">Matches</a>
+        <a href="{% url 'soccer:index' %}">Player</a>
+        <a href="{% url 'soccer:teams' %}">Teams</a>
+        <a href="{% url 'soccer:matches' %}">Matches</a>
     </header>
     <main>
         {% if player_list %}
