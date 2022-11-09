@@ -7,14 +7,21 @@
     <title>Soccer App</title>
 </head>
 <body>
-    {% if team_list %}
-    <ul>
-        {% for team in team_list %}
-        <li><a href="{% url 'results' team.id %}">{{ team.team_name }}</a></li>
-        {% endfor %}
-    </ul>
-    {% else %}
-    <p>No teams available</p>
-    {% endif %}
+    <header>
+        <a href="{% url 'index' %}">Player</a>
+        <a href="{% url 'teams' %}">Teams</a>
+        <a href="{% url 'matches' %}">Matches</a>
+    </header>
+    <main>
+        {% if player_list %}
+        <ul>
+            {% for player in player_list %}
+            <li>{{ player }}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No teams available</p>
+        {% endif %}
+    </main>
 </body>
 </html>

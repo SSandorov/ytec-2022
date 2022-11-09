@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soccer App</title>
+</head>
+<body>
+    {% if match_list %}
+    <ul>
+        {% for match in match_list %}
+        <li>
+            {% for m in match.teams.all %}
+                {{ m }}
+            {% endfor %}
+        </li>
+        <li>
+                {{ match.points_1 }}
+        </li>
+        <li>
+                {{ match.points_2 }}
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No match available</p>
+    {% endif %}
+</body>
+</html>
