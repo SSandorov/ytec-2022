@@ -1,6 +1,7 @@
 import datetime
 
 from django.db import models
+from django.urls import reverse
 from django.utils import timezone
 
 # Create your models here.
@@ -9,6 +10,10 @@ class Player(models.Model):
 
     def __str__(self):
         return self.player_text
+
+    def get_absolute_url(self):
+        return reverse('soccer:index')
+
 
 class Team(models.Model):
     team_name = models.CharField(max_length=200)

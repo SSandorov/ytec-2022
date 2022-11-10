@@ -2,7 +2,7 @@ from django import forms
 from django.views.generic.edit import CreateView
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 from django.views import generic
 
 from .models import Player, Team, Match
@@ -20,10 +20,15 @@ class IndexView(generic.ListView):
     def get_queryset(self):
         return Player.objects.order_by('-id')
 
+def playersList(request):
+    text = 'Hey!'
+    return HttpResponse(text)
+
 class CreatePlayer(CreateView):
     model = Player
     template_name = 'soccer/create-player.html'
     fields = ['player_text']
+    # success_url: reverse_lazy('create-player')
 
 class TeamsView(generic.ListView):
     template_name = 'soccer/teams.html'
