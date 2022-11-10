@@ -22,6 +22,9 @@ class Team(models.Model):
     def __str__(self):
         return self.team_name
 
+    def get_absolute_url(self):
+        return reverse('soccer:teams')
+
 class Match(models.Model):
     teams = models.ManyToManyField(Team)
     points_1 = models.IntegerField(default=0)
@@ -30,3 +33,6 @@ class Match(models.Model):
 
     def was_played_recently(self):
         return self.pub_date >= timezone.now() - datetime.timedelta(days=7)
+
+    def get_absolute_url(self):
+        return reverse('soccer:teams')
