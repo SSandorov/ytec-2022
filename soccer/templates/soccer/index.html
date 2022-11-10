@@ -8,20 +8,30 @@
 </head>
 <body>
     <header>
-        <a href="{% url 'soccer:index' %}">Player</a>
+        <a href="{% url 'soccer:create-player' %}">Player</a>
         <a href="{% url 'soccer:teams' %}">Teams</a>
         <a href="{% url 'soccer:matches' %}">Matches</a>
     </header>
     <main>
-        {% if player_list %}
-        <ul>
-            {% for player in player_list %}
-            <li>{{ player }}</li>
-            {% endfor %}
-        </ul>
-        {% else %}
-        <p>No teams available</p>
-        {% endif %}
+        <div>
+            {% if player_list %}
+            <ul>
+                {% for player in player_list %}
+                <li>{{ player }}</li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <p>No teams available</p>
+            {% endif %}
+        </div>
+        <!-- <form action="{% url 'soccer:index' %}" method="post">
+            {% csrf_token %}
+            <fieldset>
+                <legend>Add new player</legend>
+                
+                <input type="submit" value="Player">
+            </fieldset>
+        </form> -->
     </main>
 </body>
 </html>
