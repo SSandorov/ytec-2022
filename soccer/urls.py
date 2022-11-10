@@ -4,7 +4,8 @@ from . import views
 
 app_name = 'soccer'
 urlpatterns = [
-    path('', views.IndexView.as_view(), name='index'),
+    # path('', views.IndexView.as_view(), name='index'),
+    path('', views.PlayersView.as_view(), name='players'),
     path('players/add', views.CreatePlayer.as_view(), name = 'create-player'),
     path('teams', views.TeamsView.as_view(), name='teams'),
     path('teams/add', views.CreateTeam.as_view(), name='create-team'),

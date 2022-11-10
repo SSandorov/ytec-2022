@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soccer App</title>
+    <title>Soccer App | Teams</title>
 </head>
 <body>
-    {% if team_list %}
-    <ul>
-        {% for team in team_list %}
-        <li><a href="{% url 'soccer:results' team.id %}">{{ team.team_name }}</a></li>
-        {% endfor %}
-    </ul>
-    {% else %}
-    <p>No teams available</p>
-    {% endif %}
+    <main>
+        {% if team_list %}
+            <ul>
+                {% for team in team_list %}
+                <li><a href="{% url 'soccer:results' team.id %}">{{ team.team_name }}</a></li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <p>No teams available</p>
+        {% endif %}
+    </main>
 </body>
 </html>

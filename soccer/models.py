@@ -12,7 +12,7 @@ class Player(models.Model):
         return self.player_text
 
     def get_absolute_url(self):
-        return reverse('soccer:index')
+        return reverse('soccer:players')
 
 
 class Team(models.Model):
@@ -29,10 +29,10 @@ class Match(models.Model):
     teams = models.ManyToManyField(Team)
     points_1 = models.IntegerField(default=0)
     points_2 = models.IntegerField(default=0)
-    pub_date = models.DateTimeField('date published')
+    # pub_date = models.DateTimeField('date published')
 
     def was_played_recently(self):
         return self.pub_date >= timezone.now() - datetime.timedelta(days=7)
 
     def get_absolute_url(self):
-        return reverse('soccer:teams')
+        return reverse('soccer:matches')

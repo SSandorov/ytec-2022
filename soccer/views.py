@@ -5,8 +5,8 @@ from django.views import generic
 from .models import Player, Team, Match
 # Create your views here.
 
-class IndexView(generic.ListView):
-    template_name = 'soccer/index.html'
+class PlayersView(generic.ListView):
+    template_name = 'soccer/players.html'
     context_object_name = 'player_list'
 
     def get_queryset(self):
@@ -43,7 +43,7 @@ class MatchesView(generic.ListView):
 class CreateMatch(CreateView):
     model = Match
     template_name = 'soccer/create-match.html'
-    fields = ['teams', 'points_1', 'points_2', 'pub_date']
+    fields = ['teams', 'points_1', 'points_2']
 
 class ResultsView(generic.DetailView):
     model = Team
