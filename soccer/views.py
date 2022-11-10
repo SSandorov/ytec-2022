@@ -12,10 +12,6 @@ class PlayersView(generic.ListView):
     def get_queryset(self):
         return Player.objects.order_by('-id')
 
-def playersList(request):
-    text = 'Hey!'
-    return HttpResponse(text)
-
 class CreatePlayer(CreateView):
     model = Player
     template_name = 'soccer/create-player.html'

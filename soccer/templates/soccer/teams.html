@@ -4,19 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'soccer/style.css' %}">
+
     <title>Soccer App | Teams</title>
 </head>
 <body>
-    <main>
-        {% if team_list %}
-            <ul>
-                {% for team in team_list %}
-                <li><a href="{% url 'soccer:results' team.id %}">{{ team.team_name }}</a></li>
-                {% endfor %}
-            </ul>
-            {% else %}
-            <p>No teams available</p>
-        {% endif %}
-    </main>
+    <div class="page">
+        <header>
+            <a class="links-nav" href="{% url 'soccer:players' %}">Player</a>
+            <a class="links-nav" href="{% url 'soccer:create-player' %}">Add Player</a>
+            <a class="links-nav" href="{% url 'soccer:teams' %}">Teams</a>
+            <a class="links-nav" href="{% url 'soccer:create-team' %}">Add Team</a>
+            <a class="links-nav" href="{% url 'soccer:matches' %}">Matches</a>
+            <a class="links-nav" href="{% url 'soccer:create-match' %}">Add Match</a>
+        </header>
+        <main>
+            {% if team_list %}
+                <ul>
+                    {% for team in team_list %}
+                    <li><a href="{% url 'soccer:results' team.id %}">{{ team.team_name }}</a></li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                <p>No teams available</p>
+            {% endif %}
+        </main>
+    </div>
 </body>
 </html>

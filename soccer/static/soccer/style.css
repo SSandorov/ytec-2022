@@ -1,0 +1,232 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: rgb(254, 254, 254);
+  }
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    border: 1px red solid;
+}
+
+header {
+    display: flex;
+    justify-content: row;
+    align-items: center;
+
+    width: 100%;
+    height: 100px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px red solid;
+}
+
+.title-text {
+    display: flex;
+    align-items: center;
+    border: 1px gray solid;
+}
+
+nav {
+    border: 1px green solid;
+}
+
+main {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+
+    width: 100%;
+
+    border: 1px red solid;
+}
+
+/* Paragraph and subtitles fonts */
+@font-face {
+    font-family: "Roboto";
+    src: url(../soccer/fonts/Roboto/roboto-v29-latin-300.woff2);
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(../soccer/fonts/Roboto/roboto-v29-latin-300italic.woff2);
+    font-style: italic;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(../soccer/fonts/Roboto/roboto-v29-latin-700.woff2);
+    font-style: normal;
+    font-weight: 700;
+}
+
+/* Title fonts */
+@font-face {
+    font-family: "Roboto Slab";
+    src: url(../soccer/fonts/Roboto_Slab/roboto-slab-v16-latin-300.woff2);
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Roboto Slab";
+    src: url(../soccer/fonts/Roboto_Slab/roboto-slab-v16-latin-regular.woff2);
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Roboto Slab";
+    src: url(../soccer/fonts/Roboto_Slab/roboto-slab-v16-latin-700.woff2);
+    font-style: normal;
+    font-weight: 700;
+}
+
+/* Mobile Styles */
+
+h1, h2 {
+    font-family: "Roboto Slab", serif;
+    font-weight: 300;
+
+    line-height: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+h3, h4, h5, h6, button {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    line-height: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+p, a, li, label, input, textarea, select {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+
+    text-align: left;
+
+    line-height: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+strong {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+
+    text-align: left;
+
+    line-height: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+button {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-right: 1em;
+    padding-left: 1em;
+    margin-top: 1em;
+
+    border: 2px solid rgb(71, 123, 158);
+    border-radius: 10px;
+
+    background-color: white;
+}
+
+button:hover {
+    transition: all 0.3s ease;
+    background-color: rgb(71, 123, 158);
+    color: white;
+}
+
+input, textarea, select {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+
+    border: 2px solid rgb(71, 123, 158);
+    border-radius: 3px;
+
+    background-color: white;
+}
+
+input:focus {
+    border: 2px solid blue;
+}
+
+/* Font sizes */
+
+h1 {
+    font-size: 25px;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+h3, h4, h5, h6, button {
+    font-size: 20px;
+}
+
+p, a, li, label, input, textarea, select {
+    font-size: 14px;
+}
+
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+a:active {
+    text-decoration: none;
+}
+
+.links-nav {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.players-container {
+    display: flex;
+    justify-content: flex-start;
+
+    border: 1px blue solid;
+    width: 100%;
+    max-width: 500px;
+}
+
+.players {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.player {
+    padding-left: 20px;
+    padding-right: 20px;
+}
