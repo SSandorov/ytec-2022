@@ -13,12 +13,17 @@
 <body>
     <div class="page">
         <header>
-            <a class="links-nav" href="{% url 'soccer:players' %}">Player</a>
-            <a class="links-nav" href="{% url 'soccer:create-player' %}">Add Player</a>
-            <a class="links-nav" href="{% url 'soccer:teams' %}">Teams</a>
-            <a class="links-nav" href="{% url 'soccer:create-team' %}">Add Team</a>
-            <a class="links-nav" href="{% url 'soccer:matches' %}">Matches</a>
-            <a class="links-nav" href="{% url 'soccer:create-match' %}">Add Match</a>
+            <div class="title">
+                <h1 class="title-text">Soccer App</h1>
+            </div>
+            <nav>
+                <a class="links-nav" href="{% url 'soccer:players' %}">Players</a>
+                <a class="links-nav" href="{% url 'soccer:create-player' %}">Add Player</a>
+                <a class="links-nav" href="{% url 'soccer:teams' %}">Teams</a>
+                <a class="links-nav" href="{% url 'soccer:create-team' %}">Add Team</a>
+                <a class="links-nav" href="{% url 'soccer:matches' %}">Matches</a>
+                <a class="links-nav" href="{% url 'soccer:create-match' %}">Add Match</a>
+            </nav>
         </header>
         <main>
             {% if team_list %}
