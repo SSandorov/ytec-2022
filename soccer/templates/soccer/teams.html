@@ -26,15 +26,18 @@
             </nav>
         </header>
         <main>
-            {% if team_list %}
-                <ul>
-                    {% for team in team_list %}
-                    <li><a href="{% url 'soccer:results' team.id %}">{{ team.team_name }}</a></li>
-                    {% endfor %}
-                </ul>
+            <div class="main-container">
+                <h2 class="main-title">Teams</h2>
+                {% if team_list %}
+                    <div class="main-text">
+                        {% for team in team_list %}
+                            <a class="text" href="{% url 'soccer:results' team.id %}">{{ team.team_name }}</a>
+                        {% endfor %}
+                    </div>
                 {% else %}
-                <p>No teams available</p>
-            {% endif %}
+                    <p class="text">No teams available</p>
+                {% endif %}
+            </div>
         </main>
     </div>
 </body>

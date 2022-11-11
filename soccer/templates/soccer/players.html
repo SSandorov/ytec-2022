@@ -27,16 +27,19 @@
             </nav>
         </header>
         <main>
-            <div class="players-container">
+            <div class="main-container">
+                <h2 class="main-title">Players</h2>
                 {% if player_list %}
-                <div class="players">
+                <div class="main-text">
                     {% for player in player_list %}
-                    <p class="player">{{ player }}</p>
+                    <p class="text">{{ player }}</p>
                     {% endfor %}
                 </div>
+                <div class="main-text">
                 {% else %}
-                <p>No teams available</p>
+                <p class="text">No players available</p>
                 {% endif %}
+                </div>
             </div>
         </main>
     </div>

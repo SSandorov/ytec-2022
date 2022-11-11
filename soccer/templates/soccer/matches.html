@@ -26,27 +26,32 @@
             </nav>
         </header>
         <main>
-            {% if match_list %}
-                <div>
-                    {% for match in match_list %}
-                    <p>
-                        {% for m in match.teams.all %}
-                            {{ m }}
+            <div class="main-container">
+                <h2 class="main-title">Matches</h2>
+                {% if match_list %}
+                    <div class="main-text">
+                        {% for match in match_list %}
+                        <div class="shadow-box">
+                            <p class="text">
+                                {% for m in match.teams.all %}
+                                    {{ m }}
+                                {% endfor %}
+                            </p>
+                            <div>
+                                <p class="text">
+                                   Score team 1: {{ match.points_1 }}
+                                </p>
+                                <p class="text">
+                                   Score team 2: {{ match.points_2 }}
+                                </p>
+                            </div>
+                        </div>
                         {% endfor %}
-                    </p>
-                    <div>
-                        <p>
-                            {{ match.points_1 }}
-                        </p>
-                        <p>
-                            {{ match.points_2 }}
-                        </p>
                     </div>
-                    {% endfor %}
-                </div>
-            {% else %}
-                <p>No match available</p>
-            {% endif %}
+                {% else %}
+                    <p>No matches available</p>
+                {% endif %}
+            </div>
         </main>
     </div>
 </body>

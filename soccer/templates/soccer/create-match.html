@@ -26,15 +26,20 @@
       </nav>
     </header>
     <main>
-      {% block content %}
-        <form action="" method="post">
-          {% csrf_token %}
-          <div>
-          {{ form.as_p }}
-        </div>
-          <input type="submit" value="Submit" />
-        </form>
-      {% endblock %}
+      <div class="main-container">
+        <h2 class="main-title">Add Match</h2>
+        {% block content %}
+          <div class="shadow-box">
+            <form action="" method="post">
+              {% csrf_token %}
+              <div class="form-element">
+              {{ form.as_p }}
+            </div>
+              <input class="input" type="submit" value="Submit" />
+            </form>
+          </div>
+        {% endblock %}
+      </div>
     </main>
   </div>
 </body>
