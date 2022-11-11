@@ -1,7 +1,8 @@
 # YTEC Assignment
 
 A customer wants a site where he can track his table soccer scores.
-Customer requirements:
+
+## Customer requirements:
 
     Teams can be made up of a variable number of players, such as 1vs1, 2vs2 but also 1vs2 or 3vs3.
     The interface should be easy to use.
@@ -24,7 +25,7 @@ Customer requirements:
     Each team should have a summary page with some statistics such as games played, total points scored, total close victories
     There should be a week overview page, with statistics about the games played in the last week
 
-Our requirements:
+## Our requirements:
 
     Must be Django 3 (or newer) and Python3.
     Views must be class based.
@@ -32,3 +33,14 @@ Our requirements:
     developer that handle the look of a page.
     Make sure we can easily get your code running - you're free to use things like virtualenv/buildout
     Don't use the admin as part of your UI (feel free to use it for development purposes)
+    
+## How to use:
+
+Inside of your virtual environment go to the root of the project and
+```
+pip install -r requirements.txt
+```
+if it does not work try
+```
+pip3 install -r requirements.txt
+```
