@@ -36,7 +36,7 @@ A customer wants a site where he can track his table soccer scores.
     
 ## How to use:
 
-Inside of your virtual environment go to the root of the project and
+Inside of your virtual environment go to the directory of the project and
 ```
 pip install -r requirements.txt
 ```
